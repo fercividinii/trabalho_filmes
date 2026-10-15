@@ -24,6 +24,16 @@ public class Catalogo {
         return null;
     }
 
+    // SOBRECARGA - busca um filme pelo ano
+    public Filme buscarFilme(int ano) {
+        for (Filme filme : filmes) {
+            if (filme.getAno() == ano) {
+                return filme;
+            }
+        }
+        return null;
+    }
+
     // READ - lista todos os filmes
     public void listarFilmes() {
         if (filmes.isEmpty()) {
